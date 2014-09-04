@@ -7,9 +7,11 @@ window.onload = function(){
 	var turnEven="O";
 	function add_markX() {
 		this.innerHTML = turnOdd;
+		this.style.background = "lightred";
 	}
 	function add_markO() {
 		this.innerHTML = turnEven;
+		this.style.background = "lightblue";
 	}
 	
 	
