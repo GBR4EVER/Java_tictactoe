@@ -13,63 +13,42 @@ window.onload = function(){
 	}
 	
 	
-	// The following is all ruby, must convert to JS somehow!!!
-	// function winner() {
-	//     if ((@board[:a1] == @p1) && (@board[:a2] == @p1) && (@board[:a3] == @p1)) ||
-	//     ((@board[:b1] == @p1) && (@board[:b2] == @p1) && (@board[:b3] == @p1)) ||
-	//     ((@board[:c1] == @p1) && (@board[:c2] == @p1) && (@board[:c3] == @p1)) ||
-	//     ((@board[:a1] == @p1) && (@board[:b1] == @p1) && (@board[:c1] == @p1)) ||
-	//     ((@board[:a2] == @p1) && (@board[:b2] == @p1) && (@board[:c2] == @p1)) ||
-	//     ((@board[:a3] == @p1) && (@board[:b3] == @p1) && (@board[:c3] == @p1)) ||
-	//     ((@board[:a1] == @p1) && (@board[:b2] == @p1) && (@board[:c3] == @p1)) ||
-	//     ((@board[:a3] == @p1) && (@board[:b2] == @p1) && (@board[:c1] == @p1))
-	//     puts "Player #{@p1} is the winner!"
-	//     puts "Do you want to play again? Y or N?"
-	//     i = gets.chomp.upcase
-	//     if i == "Y"
-	//       start_game
-	//     elsif i == "N"
-	//       puts "Goodbye"
-	//     end
-	//     elsif ((@board[:a1] == @p2) && (@board[:a2] == @p2) && (@board[:a3] == @p2)) ||
-	//       ((@board[:b1] == @p2) && (@board[:b2] == @p2) && (@board[:b3] == @p2)) ||
-	//       ((@board[:c1] == @p2) && (@board[:c2] == @p2) && (@board[:c3] == @p2)) ||
-	//       ((@board[:a1] == @p2) && (@board[:b1] == @p2) && (@board[:b1] == @p2)) ||
-	//       ((@board[:a2] == @p2) && (@board[:b2] == @p2) && (@board[:c2] == @p2)) ||
-	//       ((@board[:a3] == @p2) && (@board[:b3] == @p2) && (@board[:c3] == @p2)) ||
-	//       ((@board[:a1] == @p2) && (@board[:b2] == @p2) && (@board[:c3] == @p2)) ||
-	//       ((@board[:a3] == @p2) && (@board[:b2] == @p2) && (@board[:c1] == @p2))
-	//       puts "Player #{@p2} is the winner!"
-	//       puts "Do you want to play again? Y or N?"
-	//       i = gets.chomp.upcase
-	//       if i == "Y"
-	//         start_game
-	//       elsif i == "N"
-	//         puts "Goodbye"
-	//       end
-	//    elsif (@board[:a1] == @p1 || @board[:a1] == @p2) &&
-	//       (@board[:a2] == @p1 || @board[:a2] == @p2) &&
-	//      (@board[:a3] == @p1 || @board[:a3] == @p2) &&
-	//      (@board[:b1] == @p1 || @board[:b1] == @p2) &&
-	//      (@board[:b2] == @p1 || @board[:b2] == @p2) &&
-	//      (@board[:b3] == @p1 || @board[:b3] == @p2) &&
-	//      (@board[:c1] == @p1 || @board[:c1] == @p2) &&
-	//      (@board[:c2] == @p1 || @board[:c2] == @p2) &&
-	//      (@board[:c3] == @p1 || @board[:c3] == @p2)
-	//      puts "Tie Game"
-	//      puts "Do you want to play again? Y or N?"
-	//      i = gets.chomp.upcase
-	//      if i == "Y"
-	//        start_game
-	//      elsif i == "N"
-	//        puts "Goodbye"
-	//      end
-	//     else
-	//       player_turn
-	//    end
-	//  end
-	// }
-
+   var winningConditions = function() {
+   	if((squares[0].innerHTML == "X" && squares[1].innerHTML == "X" && squares[2].innerHTML == "X") ||
+   	(square[3].innerHTML == "X" && squares[4].innerHTML == "X" && squares[5].innerHTML == "X") ||
+   	(squares[6].innerHTML == "X" && squares[7].innerHTML == "X" && squares[8].innerHTML == "X") ||
+   	(squares[0].innerHTML == "X" && squares[3].innerHTML == "X" && squares[6].innerHTML == "X") ||
+   	(squares[1].innerHTML == "X" && squares[4].innerHTML == "X" && squares[7].innerHTML == "X") ||
+   	(squares[2].innerHTML == "X" && squares[5].innerHTML == "X" && squares[8].innerHTML == "X") ||
+   	(squares[0].innerHTML == "X" && squares[4].innerHTML == "X" && squares[8].innerHTML == "X") ||
+   	(squares[2].innerHTML == "X" && squares[4].innerHTML == "X" && squares[6].innerHTML == "X"))
+   	{
+   	 win = true;
+   	click();
+   	alert("X wins!");
+   	}
+   	else if
+   	((squares[0].innerHTML == "O" && squares[1].innerHTML == "O" && squares[2].innerHTML == "O") ||
+   	(squares[3].innerHTML == "O" && squares[4].innerHTML == "O" && squares[5].innerHTML == "O") ||
+   	(squares[6].innerHTML == "O" && squares[7].innerHTML == "O" && squares[8].innerHTML == "O") ||
+   	(squares[0].innerHTML == "O" && squares[3].innerHTML == "O" && squares[6].innerHTML == "O") ||
+   	(squares[1].innerHTML == "O" && squares[4].innerHTML == "O" && squares[7].innerHTML == "O") ||
+   	(squares[2].innerHTML == "O" && squares[5].innerHTML == "O" && squares[8].innerHTML == "O") ||
+   	(squares[0].innerHTML == "O" && squares[4].innerHTML == "O" && squares[8].innerHTML == "O") ||
+   	(squares[2].innerHTML == "O" && squares[4].innerHTML == "O" && squares[6].innerHTML == "O"))
+   	{
+   	 win = true;
+   	click();
+   	alert("O wins!");
+   	}
+   	else {
+   	 win = true;
+   	click();
+   	alert("Tie game!");
+   	}
+};
+	
+var click = function() {
 	for(var i = 0; i < squares.length; i++) {
 		// When you click a square, runs the `add_mark` method.
 		if (i%2==0) {
