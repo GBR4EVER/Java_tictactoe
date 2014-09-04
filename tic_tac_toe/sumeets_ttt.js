@@ -1,7 +1,8 @@
 window.onload = function(){
 	
-	// 
+	// The squares function collects the <td> tags that are organized as our board.
 	var squares = document.getElementsByTagName('td');
+	// The newGame variable is created to retrieve our player objects( which are really functions).
 	var newGame = game(player("X", "player1"), player("O", "player2"));
 	
 	function player(mark_character, score_element_id){
