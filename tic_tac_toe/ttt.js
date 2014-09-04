@@ -5,7 +5,10 @@ window.onload = function(){
 	var squares = document.getElementsByTagName('td');
 	var turnOdd="X";
 	var turnEven="O";
+	
+	// The add_markX and add_markO functions allow us to place our markers down into our board.
 	function add_markX() {
+		// Creates html through our javascript.
 		this.innerHTML = turnOdd;
 		this.style.background = "lightred";
 	}
@@ -48,9 +51,8 @@ window.onload = function(){
    	click();
    	alert("Tie game!");
    	}
-};
+}
 	
-var click = function() {
 	for(var i = 0; i < squares.length; i++) {
 		// When you click a square, runs the `add_mark` method.
 		if (i%2==0) {
@@ -59,6 +61,5 @@ var click = function() {
 			squares[i].addEventListener("click", add_markX);
 		}
 	}
-}
 // <td>-</td> => <td>X</td>
 // <td class="marked" data-player="x" >-</td>
