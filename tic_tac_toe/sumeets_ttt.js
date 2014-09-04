@@ -33,9 +33,14 @@ window.onload = function(){
 			hasWinner: function(){
 				// Obviously incomplete win detection. Only considers a win in the first column.
 				// But you get the picture.
-				if (squares[0].innerHTML != "-" &&
-				squares[0].innerHTML === squares[3].innerHTML &&
-				squares[3].innerHTML === squares[6].innerHTML) {
+				if( (squares[0].className == squares[3].className && squares[3].className == squares[6].className) ||
+					(squares[1].className == squares[4].className && squares[4].className == squares[7].className) ||
+					(squares[2].className == squares[5].className && squares[5].className == squares[8].className) ||
+					(squares[0].className == squares[1].className && squares[1].className == squares[2].className) ||
+					(squares[3].className == squares[4].className && squares[4].className == squares[5].className) ||
+					(squares[6].className == squares[7].className && squares[7].className == squares[8].className) ||
+					(squares[0].className == squares[4].className && squares[4].className == squares[8].className) ||
+					(squares[2].className == squares[4].className && squares[4].className == squares[6].className))  {
 					return true;
 				}
 				else{
