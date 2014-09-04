@@ -11,68 +11,65 @@ window.onload = function(){
 	function add_markO() {
 		this.innerHTML = turnEven;
 	}
-	// var turn = "X";
-	//
-	// function add_mark(round){
-		// if (round%2 == 0) {
-			// turn="O";
-			// } else {
-				// turn="X";
-				// }
-				// this.innerHTML = turn;
-				// }
-				// function determineWinner() {
-					// if (squares[0]==squares[1] && squares[2]==squares[1] && squares[0]!="-") {
-						// if (squares[0]=="X") {
-							// alert("Xs Wins!")
-							// } else {
-								// alert("Os Win!")
-								// }
-								// } else if (squares[3]==squares[4] && squares[4]==squares[5] && squares[3]!="-") {
-									// if (squares[3]=="X") {
-										// alert("Xs Wins!")
-										// } else {
-											// alert("Os Win!")
-											// }
-											// } else if (squares[6]==squares[7] && squares[7]==squares[8] && squares[6]!="-") {
-												// if (squares[6]=="X") {
-													// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// } else if (squares[0]==squares[3] && squares[3]==squares[6] && squares[0]!="-") {
-// if (squares[0]=="X") {
-// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// } else if (squares[1]==squares[4] && squares[4]==squares[7] && squares[1]!="-") {
-// if (squares[1]=="X") {
-// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// } else if (squares[2]==squares[5] && squares[5]==squares[8] && squares[2]!="-") {
-// if (squares[2]=="X") {
-// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// } else if (squares[0]==squares[4] && squares[4]==squares[8] && squares[0]!="-") {
-// if (squares[0]=="X") {
-// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// } else if (squares[2]==squares[4] && squares[4]==squares[6] && squares[2]!="-") {
-// if (squares[2]=="X") {
-// alert("Xs Wins!")
-// } else {
-// alert("Os Win!")
-// }
-// }
-//
-// }
+	
+	
+	// The following is all ruby, must convert to JS somehow!!!
+	// function winner() {
+	//     if ((@board[:a1] == @p1) && (@board[:a2] == @p1) && (@board[:a3] == @p1)) ||
+	//     ((@board[:b1] == @p1) && (@board[:b2] == @p1) && (@board[:b3] == @p1)) ||
+	//     ((@board[:c1] == @p1) && (@board[:c2] == @p1) && (@board[:c3] == @p1)) ||
+	//     ((@board[:a1] == @p1) && (@board[:b1] == @p1) && (@board[:c1] == @p1)) ||
+	//     ((@board[:a2] == @p1) && (@board[:b2] == @p1) && (@board[:c2] == @p1)) ||
+	//     ((@board[:a3] == @p1) && (@board[:b3] == @p1) && (@board[:c3] == @p1)) ||
+	//     ((@board[:a1] == @p1) && (@board[:b2] == @p1) && (@board[:c3] == @p1)) ||
+	//     ((@board[:a3] == @p1) && (@board[:b2] == @p1) && (@board[:c1] == @p1))
+	//     puts "Player #{@p1} is the winner!"
+	//     puts "Do you want to play again? Y or N?"
+	//     i = gets.chomp.upcase
+	//     if i == "Y"
+	//       start_game
+	//     elsif i == "N"
+	//       puts "Goodbye"
+	//     end
+	//     elsif ((@board[:a1] == @p2) && (@board[:a2] == @p2) && (@board[:a3] == @p2)) ||
+	//       ((@board[:b1] == @p2) && (@board[:b2] == @p2) && (@board[:b3] == @p2)) ||
+	//       ((@board[:c1] == @p2) && (@board[:c2] == @p2) && (@board[:c3] == @p2)) ||
+	//       ((@board[:a1] == @p2) && (@board[:b1] == @p2) && (@board[:b1] == @p2)) ||
+	//       ((@board[:a2] == @p2) && (@board[:b2] == @p2) && (@board[:c2] == @p2)) ||
+	//       ((@board[:a3] == @p2) && (@board[:b3] == @p2) && (@board[:c3] == @p2)) ||
+	//       ((@board[:a1] == @p2) && (@board[:b2] == @p2) && (@board[:c3] == @p2)) ||
+	//       ((@board[:a3] == @p2) && (@board[:b2] == @p2) && (@board[:c1] == @p2))
+	//       puts "Player #{@p2} is the winner!"
+	//       puts "Do you want to play again? Y or N?"
+	//       i = gets.chomp.upcase
+	//       if i == "Y"
+	//         start_game
+	//       elsif i == "N"
+	//         puts "Goodbye"
+	//       end
+	//    elsif (@board[:a1] == @p1 || @board[:a1] == @p2) &&
+	//       (@board[:a2] == @p1 || @board[:a2] == @p2) &&
+	//      (@board[:a3] == @p1 || @board[:a3] == @p2) &&
+	//      (@board[:b1] == @p1 || @board[:b1] == @p2) &&
+	//      (@board[:b2] == @p1 || @board[:b2] == @p2) &&
+	//      (@board[:b3] == @p1 || @board[:b3] == @p2) &&
+	//      (@board[:c1] == @p1 || @board[:c1] == @p2) &&
+	//      (@board[:c2] == @p1 || @board[:c2] == @p2) &&
+	//      (@board[:c3] == @p1 || @board[:c3] == @p2)
+	//      puts "Tie Game"
+	//      puts "Do you want to play again? Y or N?"
+	//      i = gets.chomp.upcase
+	//      if i == "Y"
+	//        start_game
+	//      elsif i == "N"
+	//        puts "Goodbye"
+	//      end
+	//     else
+	//       player_turn
+	//    end
+	//  end
+	// }
+
 	for(var i = 0; i < squares.length; i++) {
 		// When you click a square, runs the `add_mark` method.
 		if (i%2==0) {
