@@ -1,0 +1,41 @@
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+/* ------------------------------------------------------------------------- */
+
+body{
+	text-align: center;
+	font-family: monospace;
+}
+
+#the_board{
+	margin: 0 auto;
+}
+
+td{
+	background: #eeeeee;
+	padding: 20px;
+}
+
+td:hover{
+	background: #cccccc;
+}
+
+#scores{
+	margin: 0;
+	padding: 0;
+}
+
+#scores li{
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+	background: #eeeeee;
+}
