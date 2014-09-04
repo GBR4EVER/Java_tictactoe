@@ -17,8 +17,7 @@ window.onload = function(){
 		this.style.background = "lightblue";
 	}
 	
-	
-   var winningConditions = function() {
+	var winningConditions = function() {
    	if((squares[0].innerHTML == "X" && squares[1].innerHTML == "X" && squares[2].innerHTML == "X") ||
    	(square[3].innerHTML == "X" && squares[4].innerHTML == "X" && squares[5].innerHTML == "X") ||
    	(squares[6].innerHTML == "X" && squares[7].innerHTML == "X" && squares[8].innerHTML == "X") ||
